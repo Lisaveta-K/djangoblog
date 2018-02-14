@@ -3,6 +3,16 @@
 	<title>Лизаветин питонячий блоУг</title>
 </head>
 <body>
-	<h2>Привет, солнышко!)</h2>
+	<h2>Лизаветин питонячий блоУг</h2>
+	<div class="post-list">
+	{% for post in posts %}
+   		<div class="post-list__item">
+   			<span>Дата публикации: {{ post.published_date|date:"d M Y" }}</span>
+   			<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+        	<b>Автор: {{ post.author }}</b>
+   		</div>
+	{% endfor %}
+	</div>
 </body>
 </html>
