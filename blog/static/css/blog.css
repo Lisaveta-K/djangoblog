@@ -36,7 +36,14 @@ header {
   background-color: #FFB6C1;
   padding: 20px;
 }
-header h2 {
+header a {
+  color: #FFFFFF;
+}
+header a:hover {
+  color: #FF5A5A;
+}
+header a:focus {
+  text-decoration: none;
   color: #FFFFFF;
 }
 footer {
@@ -81,10 +88,8 @@ footer a h3 {
 }
 .main-content {
   background-color: #FFF2F2;
-  padding: 40px 0 0 0;
-}
-.post-list {
-  padding: 0 80px 60px 80px;
+  min-height: 82vh;
+  padding: 40px 80px 60px 80px;
 }
 .post-list__item {
   background-color: #FFFFFF;

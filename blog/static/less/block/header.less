@@ -2,7 +2,16 @@ header {
 	background-color: @color-pink;
 	padding: 20px;
 
-	h2 {
+	a {
 		color: @white;
+
+		&:hover {
+			color: @color-salmon;
+		}
+
+		&:focus {
+			text-decoration: none;
+			color: @white;
+		}
 	}
 }
