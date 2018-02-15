@@ -1,0 +1,22 @@
+{
+  "name": "Djangoapp",
+  "version": "1.0.0",
+  "description": "I want to work in Irk.ru",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "author": "Lisaveta_K",
+  "license": "",
+  "dependencies": {
+    "autoprefixer": "^6.3.3",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-postcss": "^6.1.0",
+    "lost": "^6.7.2",
+    "trunk8": "0.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
