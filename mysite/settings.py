@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'sorl.thumbnail',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '')
 MEDIA_URL = '/'
 
 CACHES = {'default': django_cache_url.config()}
+CKEDITOR_UPLOAD_PATH = "media/"
+CLEAR_CACHE_ON_RESTART = True

@@ -12,7 +12,7 @@
 				<div class="post-list__content">
 		   			<span>Дата публикации: {{ post.published_date|date:"d M Y" }}</span>
 		   			<h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-		        	<p>{{ post.text|linebreaksbr }}</p>
+		        	<div>{{ post.text|safe }}</div>
 		        	<b>Автор: {{ post.author }}</b>
 	        	</div>
 	   		</div>
