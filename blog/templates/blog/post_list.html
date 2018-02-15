@@ -7,13 +7,13 @@
 		   		<div class="post-list__thumbnail">
 		   			{% load thumbnail %}
 			   		{% thumbnail post.image "100x100" crop="center" as im %}
-			    		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+			    		<a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></a>
 					{% endthumbnail %}
 				</div>
 				<div class="post-list__content">
 		   			<span>Дата публикации: {{ post.published_date|date:"d M Y" }}</span>
 		   			<h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-		        	<p>{{ post.text|linebreaksbr }}</p>
+		        	<p>{{ post.text|truncatechars:400 }}</p>
 		        	<b>Автор: {{ post.author }}</b>
 	        	</div>
 	   		</div>

@@ -5,7 +5,7 @@
 	   		<div class="post-list__item">
 		   		<div class="post-list__thumbnail">
 		   			{% load thumbnail %}
-			   		{% thumbnail post.image "100x100" crop="center" as im %}
+			   		{% thumbnail post.image "300x300" crop="center" as im %}
 			    		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 					{% endthumbnail %}
 				</div>

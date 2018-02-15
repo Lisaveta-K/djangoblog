@@ -10,3 +10,12 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+ 
+def error_404(request):
+    data = {}
+    return render(request,'blog/404.html', data)
+ 
+def error_500(request):
+    data = {}
+    return render(request,'blog/500.html', data)
+
