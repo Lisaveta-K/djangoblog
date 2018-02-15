@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>Лизаветин питонячий блоУг</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<header><h2>Лизаветин питонячий блоУг</h2></header>
+
+<section class="main-content">
+
+{% block content %} {% endblock %}
+
+</section>
+
+<footer></footer>
+</body>
+</html>

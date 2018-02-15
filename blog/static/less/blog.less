@@ -1,21 +1,47 @@
 @import "_fonts";
+@import "_vars";
 
 html {
   font-size: 62.5%;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 1.65rem;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  color: @color-text;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 {
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 30px;
+	margin: 10px 0;
+}
+
+h3 {
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	margin: 0 0 15px 0;
 }
 
 a {
 	text-decoration: none;
-	color: #ebacca;
+	color: @color-salmon;
 }
 
 a:hover {
 	text-decoration: none;
 	color: pink;
 }
+
+@import "block/header";
+@import "block/footer";
+@import "block/main-content";
+@import "block/post-list";
