@@ -1,4 +1,33 @@
 footer {
 	background-color: @color-pink;
 	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+		color: @white;
+		font-size: 26px;
+		margin-right: 12px;
+		line-height: 32px;
+		display: inline-block;
+		vertical-align: middle;
+
+		&:hover {
+			color: @color-salmon;
+		}
+
+		&:focus {
+			text-decoration: none;
+			color: @white;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		h3 {
+			margin: 0;
+		}
+	}
 }
