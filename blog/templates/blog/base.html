@@ -15,9 +15,12 @@
 </head>
 <body>
 <header>
-	<a href="{% url 'post_list' %}"><h2>Лизаветин питонячий блоУг</h2></a>
+	<div><a href="{% url 'post_list' %}"><h2>Лизаветин питонячий блоУг</h2></a></div>
 	{% if user.is_authenticated %}
-		<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		<div class="header-auth">
+			<div class="header-auth__item"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Добавить пост</a></div>
+			<div class="header-auth__item"><span>{{ user }}<a href="{% url 'logout' %}?next={% url 'post_list' %}"> Выйти <i class="fa fa-sign-out"></i></a></span></div>
+		</div>
 	{% endif %}
 </header>
 

@@ -45,10 +45,14 @@ header {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header a {
   color: #FFFFFF;
-  display: block;
 }
 header a:hover {
   color: #FF5A5A;
@@ -56,6 +60,29 @@ header a:hover {
 header a:focus {
   text-decoration: none;
   color: #FFFFFF;
+}
+header .header-auth {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 10;
+  -webkit-flex: 10 auto;
+     -moz-box-flex: 10;
+      -ms-flex: 10 auto;
+          flex: 10 auto;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+header .header-auth__item {
+  margin-right: 20px;
+}
+header .header-auth__item:last-child {
+  margin-right: 0;
 }
 footer {
   background-color: #FFB6C1;
