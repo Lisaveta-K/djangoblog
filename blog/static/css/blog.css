@@ -35,9 +35,20 @@ a:hover {
 header {
   background-color: #FFB6C1;
   padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header a {
   color: #FFFFFF;
+  display: block;
 }
 header a:hover {
   color: #FF5A5A;

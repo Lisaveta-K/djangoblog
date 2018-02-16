@@ -14,7 +14,9 @@
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-<header><a href="{% url 'post_list' %}"><h2>Лизаветин питонячий блоУг</h2></a></header>
+<header>
+<a href="{% url 'post_list' %}"><h2>Лизаветин питонячий блоУг</h2></a>
+<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></header>
 
 <section class="main-content">
 
