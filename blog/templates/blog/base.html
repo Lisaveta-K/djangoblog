@@ -21,6 +21,11 @@
 			<div class="header-auth__item"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Добавить пост</a></div>
 			<div class="header-auth__item"><span>{{ user }}<a href="{% url 'logout' %}?next={% url 'post_list' %}"> Выйти <i class="fa fa-sign-out"></i></a></span></div>
 		</div>
+	{% else %}
+		<div class="header-auth">
+			<div class="header-auth__item"><a href="{% url 'login' %}">Войти <i class="fa fa-sign-in"></i></a></div>
+			<div class="header-auth__item"><a href="{% url 'register' %}">Зарегестрироваться <i class="fa fa-user-plus"></i></a></div>
+		</div>
 	{% endif %}
 </header>
 

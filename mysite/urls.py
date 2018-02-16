@@ -17,10 +17,20 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+from django.views.generic.edit import CreateView
+from django.contrib.auth.forms import UserCreationForm
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^auth/', include('django.contrib.auth.urls')),
+    url('^register/', CreateView.as_view(
+            template_name='registration/register.html',
+            form_class=UserCreationForm,
+            success_url='/'
+    ), name='register'),
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

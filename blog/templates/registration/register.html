@@ -1,0 +1,10 @@
+{% extends '../blog/base.html' %}
+
+{% block content %}
+  <h2>Регистрация</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="save btn btn-default">Зарегестрироваться</button> 
+  </form>
+{% endblock %}

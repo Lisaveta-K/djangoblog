@@ -3,7 +3,10 @@
 	{% block content %}
 		<h1>Новая запись блога</h1>
 	    <form method="POST" class="post-form">{% csrf_token %}
-	        {{ form.as_p }}
-	        <button type="submit" class="save btn btn-default">Save</button>
+	    	<label>Заголовок поста</label>
+	        {{ form.title }}
+	        <label>Текст поста</label>
+	        {{ form.text }}
+	        <button type="submit" class="save btn btn-default">Сохранить и опубликовать</button>
 	    </form>
 	{% endblock %}

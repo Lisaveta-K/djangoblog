@@ -114,6 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
+LOGIN_REDIRECT_URL = "../"
+
 TIME_ZONE = 'Asia/Irkutsk'
 
 USE_I18N = True
