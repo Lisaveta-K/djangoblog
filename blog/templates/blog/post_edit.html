@@ -1,12 +1,9 @@
 {% extends "./base.html" %}
 
 	{% block content %}
-		<h1>Новая запись блога</h1>
-	    <form method="POST" class="post-form">{% csrf_token %}
-	    	<label>Заголовок поста</label>
-	        {{ form.title }}
-	        <label>Текст поста</label>
-	        {{ form.text }}
-	        <button type="submit" class="save btn btn-default">Сохранить и опубликовать</button>
-	    </form>
+		<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+			{{ form.media }}
+    		{{ form.as_p }}
+			<button type="submit" class="save btn btn-default">Сохранить и опубликовать</button>
+		</form>
 	{% endblock %}
