@@ -15,7 +15,8 @@
 </head>
 <body>
 <header>
-	<div><a href="{% url 'post_list' %}"><h2>Лизаветин питонячий блоУг</h2></a></div>
+	<div><a href="{% url 'post_list' %}"><h2>Лиза и Django</h2></a></div>
+	<div><a href="{% url 'post_list' %}"><h2>Хочу в IRK.ru</h2></a></div>
 	{% if user.is_authenticated %}
 		<div class="header-auth">
 			<div class="header-auth__item"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Добавить пост</a></div>

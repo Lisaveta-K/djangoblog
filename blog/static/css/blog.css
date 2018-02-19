@@ -67,11 +67,6 @@ header .header-auth {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 10;
-  -webkit-flex: 10 auto;
-     -moz-box-flex: 10;
-      -ms-flex: 10 auto;
-          flex: 10 auto;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
      -moz-box-pack: end;
