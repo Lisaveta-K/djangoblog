@@ -52,3 +52,14 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def post_remove(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == "POST":
+        form = PostForm(request.POST,request.FILES, instance=post)
+        if form.is_valid():
+            post.delete()
+            return redirect('post_list')
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'blog/post_remove.html', {'form': form})

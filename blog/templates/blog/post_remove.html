@@ -1,0 +1,10 @@
+{% extends "./base.html" %}
+
+	{% block content %}
+	<h3>Вы уверены, что хотите удалить данный пост навсегда?</h3>
+		<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+			{{ form.media }}
+    		{{ form.as_p }}
+			<button type="submit" class="remove btn btn-default">Удалить пост навсегда</button>
+		</form>
+	{% endblock %}
